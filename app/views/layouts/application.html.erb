@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountains</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div class = 'welcome'>
+    <div class = 'banner'>
+      <h1> Welcome to the mountains company </h1>
+    </div>
+        <div class = 'menu'>
+          <ul>
+            <li><%= link_to('List Mountains', mountains_path, :class => 'button-link pull-right') %></li>
+            <li><%= link_to('New Mountain', mountains_new_path, :class => 'button-link') %></li>
+          </ul>
+        </div>
+  </div>
+
+  <div class='clear content'>
+  <%= yield %>
+  </div>
+
+</body>
+</html>

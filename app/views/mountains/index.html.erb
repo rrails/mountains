@@ -1,0 +1,10 @@
+<div class = 'mtlist'>
+
+  <% @mountains.each do |mountain| %>
+    <p>
+      <%= link_to(mountain.name, mountain_path(mountain.id)) %>
+      <%= button_to('Delete Mountain', mountain_destroy_path(mountain.id)) %>
+    </p>
+  <% end %>
+
+</div>
